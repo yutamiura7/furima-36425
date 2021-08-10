@@ -55,12 +55,12 @@
 
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
-| postalcode         | integer| null: false |
-| prefectures        | integer| null: false |
+| postalcode         | string | null: false |
+| area_id            | integer| null: false |
 | municipalities     | string | null: false |
 | address            | string | null: false |
 | building           | string |             |
-| phone              | integer| null: false |
+| phone              | string | null: false |
 
 ### Association
 
