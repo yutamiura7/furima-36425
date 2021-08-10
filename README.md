@@ -53,14 +53,15 @@
 
 ## shippingaddress テーブル
 
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| postalcode         | string | null: false |
-| area_id            | integer| null: false |
-| municipalities     | string | null: false |
-| address            | string | null: false |
-| building           | string |             |
-| phone              | string | null: false |
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| postalcode         | string     | null: false                    |
+| area_id            | integer    | null: false                    |
+| municipalities     | string     | null: false                    |
+| address            | string     | null: false                    |
+| building           | string     |                                |
+| phone              | string     | null: false                    |
+| buy                | references | null: false, foreign_key: true |
 
 ### Association
 
