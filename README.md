@@ -41,15 +41,15 @@
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
-| card   | integer    | null: false                    |
-|deadline| integer    | null: false                    |
-|security| integer    | null: false                    |
 | user   | references | null: false, foreign_key: true |
+| item   | references | null: false, foreign_key: true |
 
 ### Association
 
 - has_one :shippingaddress
 - belongs_to :items
+- belongs_to :users
+
 
 ## shippingaddress テーブル
 
