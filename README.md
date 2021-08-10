@@ -37,7 +37,7 @@
 - belongs_to :user
 - has_one :buy
 
-## buy テーブル
+## buys テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
@@ -47,8 +47,8 @@
 ### Association
 
 - has_one :shippingaddress
-- belongs_to :items
-- belongs_to :users
+- belongs_to :item
+- belongs_to :user
 
 
 ## shippingaddress テーブル
