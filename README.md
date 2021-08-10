@@ -51,7 +51,7 @@
 - belongs_to :user
 
 
-## shippingaddress テーブル
+## shippingaddresses テーブル
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
