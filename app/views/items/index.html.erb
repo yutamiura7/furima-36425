@@ -131,8 +131,8 @@
 
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
       <% unless @items == [] %>
-        <li class='list'>
-          <% @items.each do |item| %>
+        <% @items.each do |item| %>
+          <li class='list'>
             <%= link_to "#" do %>
               <div class='item-img-content'>
                 <%= image_tag item.image, class: "item-img" %>
@@ -157,8 +157,8 @@
                 </div>
               </div>
             <% end %>
-          <% end %>
-        </li>
+          </li>
+        <% end %>
         <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
       <%else%>
         <%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
