@@ -18,6 +18,7 @@
 - has_many :items
 - has_many :buys
 
+
 ## items テーブル
 
 | Column             | Type       | Options                        |
@@ -36,6 +37,7 @@
 
 - belongs_to :user
 - has_one :buy
+
 
 ## buys テーブル
 
