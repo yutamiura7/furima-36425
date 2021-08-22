@@ -18,6 +18,7 @@
 - has_many :items
 - has_many :buys
 
+
 ## items テーブル
 
 | Column             | Type       | Options                        |
@@ -28,7 +29,7 @@
 | status_id          | integer    | null: false                    |
 | load_id            | integer    | null: false                    |
 | area_id            | integer    | null: false                    |
-| shippingday_id    | integer    | null: false                    |
+| shippingday_id     | integer    | null: false                    |
 | price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
@@ -36,6 +37,7 @@
 
 - belongs_to :user
 - has_one :buy
+
 
 ## buys テーブル
 
