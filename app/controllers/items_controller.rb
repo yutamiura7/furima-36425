@@ -49,8 +49,10 @@ class ItemsController < ApplicationController
 
   def move_to_index
     item = Item.find(params[:id])
-    unless current_user.id == item.user_id
-      redirect_to action: :index
+    if current_user.id != item.user_id
+      redirect_to root_path
+    elsif item.buy.present?
+      redirect_to root_path
     end
   end
 
