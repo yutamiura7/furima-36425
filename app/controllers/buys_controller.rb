@@ -1,7 +1,7 @@
 class BuysController < ApplicationController
   before_action :authenticate_user!, only: :index
-  before_action :move_to_index, only: :index
-  before_action :set_item
+  before_action :set_item, only: [:index, :create]
+  before_action :move_to_index, only: [:index, :create]
 
   def index
     @buy_shippingaddress = BuyShippingaddress.new
@@ -35,12 +35,7 @@ class BuysController < ApplicationController
   end
 
   def move_to_index
-    item = Item.find(params[:item_id])
-    if current_user.id == item.user_id
-      redirect_to root_path
-    elsif item.buy.present?
-      redirect_to root_path
-    end
+    redirect_to root_path if @item.buy.present? || current_user.id == @item.user_id
   end
 
   def set_item
