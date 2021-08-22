@@ -23,7 +23,7 @@ RSpec.describe BuyShippingaddress, type: :model do
       it 'postalcodeが空だと保存できないこと' do
         @buy_shippingaddress.postalcode = ''
         @buy_shippingaddress.valid?
-        expect(@buy_shippingaddress.errors.full_messages).to include("Postalcode is invalid")
+        expect(@buy_shippingaddress.errors.full_messages).to include("Postalcode can't be blank")
       end
       it 'postalcodeが半角のハイフンを含んだ正しい形式でないと保存できないこと' do
         @buy_shippingaddress.postalcode = '1234567'
@@ -53,7 +53,7 @@ RSpec.describe BuyShippingaddress, type: :model do
       it 'phoneが空だと保存できないこと' do
         @buy_shippingaddress.phone = ''
         @buy_shippingaddress.valid?
-        expect(@buy_shippingaddress.errors.full_messages).to include("Phone is invalid")
+        expect(@buy_shippingaddress.errors.full_messages).to include("Phone can't be blank")
       end
       it 'phoneが9桁以下だと保存できないこと' do
         @buy_shippingaddress.phone = '123456789'
