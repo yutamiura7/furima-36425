@@ -23,17 +23,17 @@ RSpec.describe BuyShippingaddress, type: :model do
       it 'postalcodeが空だと保存できないこと' do
         @buy_shippingaddress.postalcode = ''
         @buy_shippingaddress.valid?
-        expect(@buy_shippingaddress.errors.full_messages).to include("Postalcode is invalid. Include hyphen(-)")
+        expect(@buy_shippingaddress.errors.full_messages).to include("Postalcode is invalid")
       end
       it 'postalcodeが半角のハイフンを含んだ正しい形式でないと保存できないこと' do
         @buy_shippingaddress.postalcode = '1234567'
         @buy_shippingaddress.valid?
-        expect(@buy_shippingaddress.errors.full_messages).to include('Postalcode is invalid. Include hyphen(-)')
+        expect(@buy_shippingaddress.errors.full_messages).to include("Postalcode is invalid")
       end
       it 'postalcodeが半角のハイフンを含んだ全角文字列では保存できないこと' do
         @buy_shippingaddress.postalcode = '１２３-４５６７'
         @buy_shippingaddress.valid?
-        expect(@buy_shippingaddress.errors.full_messages).to include('Postalcode is invalid. Include hyphen(-)')
+        expect(@buy_shippingaddress.errors.full_messages).to include("Postalcode is invalid")
       end
       it 'area_idが1では出品できない' do
         @buy_shippingaddress.area_id = 1

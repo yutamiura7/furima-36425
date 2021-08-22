@@ -10,7 +10,7 @@ class BuyShippingaddress
     validates :token
   end
 
-  validates :postalcode, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)"}
+  validates :postalcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/ }
   validates :area_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :phone, format: { with: /\A\d{10,11}\z/ }
 
